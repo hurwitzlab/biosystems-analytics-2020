@@ -1,0 +1,11 @@
+__pycache__
+.pytest_cache
+*.swp
+*~
+.cache
+.ipynb_checkpoints
+.DS_Store
+tex2pdf*
+.mypy_cache
+.log
+.coverage
