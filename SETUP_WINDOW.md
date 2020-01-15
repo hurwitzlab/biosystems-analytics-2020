@@ -112,6 +112,7 @@ Now that we have Git installed on both of the file systems, lets check which Git
 1. Now type `which git`. This will show you which git is executed when you type `git`. Notice that it only shows the one in Ubuntu - that is the git that will be used when you are in your terminals.
 
 #### Set the Git Config
+Create an account on [Github](https://github.com/). Send your account name and email to the teacher.
 
 The final step here is to add your email and name to the Git config. This will allow you to commit and push things to GitHub. Make sure to include the space after `.email` and `.name`, and always remember to close your quotes ' ' and " ".
 
