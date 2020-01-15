@@ -214,9 +214,9 @@ You can indent either with Tab characters or spaces, but you must be consistent.
 I would strongly recommend you only use spaces, but, again, this is territory for religious wars.
 Any sufficiently advanced code editor can turn the press of the `Tab` key into spaces.
 
-The number of spaces you indent should be four.
+The number of spaces thou shall indent is four.
 Four is the number of spaces, and the number of the spaces is four.
-Five thou shalt not indent, neither indentest though three unless, of course, you proceedest to four.
+Five thou shalt not indent, neither indentest thou three unless, of course, thou proceedest to four.
 Six is right out!
 
 # Assignments
