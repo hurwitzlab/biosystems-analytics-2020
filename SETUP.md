@@ -219,6 +219,40 @@ Four is the number of spaces, and the number of the spaces is four.
 Five thou shalt not indent, neither indentest thou three unless, of course, thou proceedest to four.
 Six is right out!
 
+# `new.py`
+
+In your clone of the repo, there is a `bin` directory that contains the program `new.py`.
+You can use this program to create new programs.
+You can execute it by giving the full path to the program, e.g., to create the `crowsnest.py` program:
+
+```
+$ cd ~/work/biosystems-analytics-2020/exercises/crowsnest
+$ ~/work/biosystems-analytics-2020/bin/new.py crowsnest.py
+```
+
+Alternately, there is an environmental variable called `$PATH` on your system which is a colon-delimited list of directories where the operating system will look for programs.
+You can copy `new.py` to one of those directories, and then you should be able to execute `new.py` from any directory without having to reference the full path.
+
+Another option is to add the directory where `new.py` lives to your `$PATH`.
+E.g., if the program is located in `~/work/biosystems-analytics-2020/bin`, then edit your `~/.bashrc` to add it like so:
+
+```
+export PATH=$HOME/work/biosystems-analytics-2020/bin:$PATH
+```
+
+As you write and install more programs that you wish to use, you may find yourself adding many directories to `$PATH`.
+In that case, it may be nicer to create something like `~/.local/bin` for the programs and adding that as above.
+
+If you don't wish to use `new.py`, you can copy `exercises/template/template.py` to start off a new program, e.g.:
+
+```
+$ cd ~/work/biosystems-analytics-2020/exercises/crowsnest
+$ cp ~/work/biosystems-analytics-2020/template/template.py crowsnest.py
+```
+
+You can, of course, choose to start from nothing.
+The `new.py` and `template.py` options are there to save you from typing common boilerplate code that will be expected of every program.
+
 # Assignments
 
 The procedure for assignments:
@@ -232,3 +266,5 @@ The procedure for assignments:
 * `git push`
 
 Verify that you can see `new_program.py` in _your repository_ on GitHub.com.
+
+
