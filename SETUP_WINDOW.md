@@ -112,14 +112,38 @@ Now that we have Git installed on both of the file systems, lets check which Git
 1. Now type `which git`. This will show you which git is executed when you type `git`. Notice that it only shows the one in Ubuntu - that is the git that will be used when you are in your terminals.
 
 #### Set the Git Config
-Create an account on [Github](https://github.com/). Send your account name and email to the teacher.
+Create an account on [Github](https://github.com/). Send your account name by email to the teacher.
 
-The final step here is to add your email and name to the Git config. This will allow you to commit and push things to GitHub. Make sure to include the space after `.email` and `.name`, and always remember to close your quotes ' ' and " ".
+Then add your email and name to the Git config. This will allow you to commit and push things to GitHub. Make sure to include the space after `.email` and `.name`, and always remember to close your quotes ' ' and " ".
 
 1. Type `git config --global user.email 'your email here in single quotes'`.
 1. Type `git config --global user.name 'Your Name In Single Quotes'`.
 
 Once you are done, type `git config -l` and verify that it has your name and email saved correctly.
+
+#### Set up SSH Keys
+
+SSH stands for "secure shell" and is a protocol for encrypting communications with remote systems.
+You will need an SSH key pair which can be found in two text files that contain your "public" and "private" keys.
+We will add your public key to your GitHub settings so that you can securely communicate with the GitHub.com server without having to authenticate with a username and password.
+
+* Open a terminal
+* Execute `ls ~/.ssh`
+* If you see `No such file or directory`, then execute `ssh-keygen`, hit `Enter` to accept all defaults
+* You should have two files at least like `id_rsa` and `id_rsa.pub` which represent an SSH key pair. The `.pub` file contains the _public_ key which you need to copy to GitHub. The other file is your _private_ key that you should never touch, copy, use, or email. If that key is compromised, you should delete the files and use `ssh-keygen` to generate a new pair. You can generate as many pairs as you like, saving them into different files.
+* Copy the contents of `~/.ssh/id_rsa.pub`. On a Mac, you can do `pbcopy < ~/.ssh/id_rsa.pub`. Otherwise, you can use `cat ~/.ssh/id_rsa.pub` to "concatenate" the contents to the screen, then copy the text to your clipboard.
+* On GitHub.com, go to your user settings by clicking on your name/icon in the upper-right corner to view a drop-down list. Click on "Settings" (2nd from the bottom of the list).
+* In the left side, there is a table. Click on "SSH and GPG keys".
+* Click on the big green "New SSH Key".
+* Give your key a name like "laptop" and paste in the _public_ key value. 
+* Click the big green "Add SSH key" button.
+
+#### Forking the repo
+
+* Go to https://github.com/hurwitzlab/biosystems-analytics-2020
+* Click on the "Fork" button in the upper-right of the page, just below the big black bar.
+* Fork into _your_ repository.
+* Verify that you have something like https://github.com/id/biosystems-analytics-2020 where `<id>` is _your GitHub username_.
 
 ## Install Python and PyCharm
 
