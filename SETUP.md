@@ -1,14 +1,15 @@
 # How to set up your development environment
 
 You will need to install several programs in order to create an environment in which you can write code.
-Most of the examples I show will use the command line, but it may be possible to use graphical user interfaces (GUIs) for some of these such as Git Desktop instead of `git`.
 
 * A terminal/command line
 * `git` for version control
 * `ssh` for SSH keys
 * `python3` for programming
 * `make` (optional) for running test suite, documenting/automating commands
+* A text editor like `vi`, `emacs`, `pico`, Notepad, Sublime, TextWrangler, TextMate or an IDE (integrated development environment) like PyCharm, Microsoft VSCode, Spyder
 
+Most of the examples I show will use the command line, but it may be possible to use graphical user interfaces (GUIs) for some of these such as Git Desktop instead of `git`.
 Note that the `~` is a shortcut to your `$HOME` directory.
 
 # Terminal
@@ -28,8 +29,9 @@ If you are on a Windows machine, you should install some sort of command line:
 
 # Set up SSH Keys
 
-SSH stands for "secure shell" and is a protocol for encryptiung communications with remote systems.
-You will an SSH key pair which can be found in two text files that contain your "public" and "private" keys.
+SSH stands for "secure shell" and is a protocol for encrypting communications with remote systems.
+You will need an SSH key pair which can be found in two text files that contain your "public" and "private" keys.
+We will add your public key to your GitHub settings so that you can securely communicate with the GitHub.com server without having to authenticate with a username and password.
 
 * Open a terminal
 * Execute `ls ~/.ssh`
@@ -47,7 +49,7 @@ You will an SSH key pair which can be found in two text files that contain your 
 * Go to https://github.com/hurwitzlab/biosystems-analytics-2020
 * Click on the "Fork" button in the upper-right of the page, just below the big black bar.
 * Fork into _your_ repository.
-* Verify that you have something like https://github.com/<id>/biosystems-analytics-2020 where `<id>` is _your GitHub username_.
+* Verify that you have something like https://github.com/id/biosystems-analytics-2020 where `<id>` is _your GitHub username_.
 
 # Install `git`
 
@@ -74,7 +76,7 @@ If you are on a Windows machine, see https://git-scm.com/download/win.
 
 Alternate instructions for command line:
 
-* Go to _your_ GitHub repo for the class, e.g., https://github.com/<id>/biosystems-analytics-2020. Be sure it is _NOT THE HURWITZLAB_ repo.
+* Go to _your_ GitHub repo for the class, e.g., https://github.com/id/biosystems-analytics-2020. Be sure it is _NOT THE HURWITZLAB_ repo.
 * Click on the green "Clone or download" button.
 * Choose the SSH URL if you have set up SSH keys; otherwise choose the HTTPS version.
 * Open a terminal
@@ -89,7 +91,7 @@ Alternate instructions for command line:
 
 In order to get updates from the HurwitzLab copy of the repo, you must set it as an "upstream" repository.
 
-* Change into your local repo checkout
+* Change into your local repo checkout, e.g., `~/work/biosystems-analytics-2020`
 * Execute `git remote add upstream https://github.com/hurwitzlab/biosystems-analytics-2020.git`
 
 # Using `git`
@@ -195,3 +197,38 @@ Each of these should be installable using Python's `pip` module, e.g.:
 ```
 $ python3 -m pip install pytest pylint flake8 mypy
 ```
+
+# Editing code
+
+Python code must be written as _plain text_, so you cannot use something like Microsoft Word.
+Your choice of editor is a deeply personal one, and religious wars typically result from claiming that your editor is in any way better than someone else's.
+Ken's personal preference is for `vi`, a terminal-based editor, but most people would prefer something fancier like VSCode or Spyder.
+You should try different tools and choose the one that works best for you.
+I might suggest you start with VSCode as it works on both Windows and Mac quite well.
+
+# Indentation
+
+Python uses whitespace to denote code structure.
+Indentation is used to group individual statements into "blocks."
+You can indent either with Tab characters or spaces, but you must be consistent.
+I would strongly recommend you only use spaces, but, again, this is territory for religious wars.
+Any sufficiently advanced code editor can turn the press of the `Tab` key into spaces.
+
+The number of spaces you indent should be four.
+Four is the number of spaces, and the number of the spaces is four.
+Five thou shalt not indent, neither indentest though three unless, of course, you proceedest to four.
+Six is right out!
+
+# Assignments
+
+The procedure for assignments:
+
+* `cd ~/work/biosystems-analytics-2020`
+* `git pull upstream master`
+* `cd assignments/new_assigment`
+* Write the new program, pass all the tests.
+* `git add new_program.py`
+* `git commit -m passing new_program.py`
+* `git push`
+
+Verify that you can see `new_program.py` in _your repository_ on GitHub.com.
