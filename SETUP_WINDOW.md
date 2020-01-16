@@ -131,7 +131,7 @@ We will add your public key to your GitHub settings so that you can securely com
 * Execute `ls ~/.ssh`
 * If you see `No such file or directory`, then execute `ssh-keygen`, hit `Enter` to accept all defaults
 * You should have two files at least like `id_rsa` and `id_rsa.pub` which represent an SSH key pair. The `.pub` file contains the _public_ key which you need to copy to GitHub. The other file is your _private_ key that you should never touch, copy, use, or email. If that key is compromised, you should delete the files and use `ssh-keygen` to generate a new pair. You can generate as many pairs as you like, saving them into different files.
-* Copy the contents of `~/.ssh/id_rsa.pub`. On a Mac, you can do `pbcopy < ~/.ssh/id_rsa.pub`. Otherwise, you can use `cat ~/.ssh/id_rsa.pub` to "concatenate" the contents to the screen, then copy the text to your clipboard.
+* Copy the contents of `~/.ssh/id_rsa.pub`. Otherwise, you can use `cat ~/.ssh/id_rsa.pub` to "concatenate" the contents to the screen, then copy the text to your clipboard.
 * On GitHub.com, go to your user settings by clicking on your name/icon in the upper-right corner to view a drop-down list. Click on "Settings" (2nd from the bottom of the list).
 * In the left side, there is a table. Click on "SSH and GPG keys".
 * Click on the big green "New SSH Key".
