@@ -112,13 +112,45 @@ Now that we have Git installed on both of the file systems, lets check which Git
 1. Now type `which git`. This will show you which git is executed when you type `git`. Notice that it only shows the one in Ubuntu - that is the git that will be used when you are in your terminals.
 
 #### Set the Git Config
+Create an account on [Github](https://github.com/). Send your account name by email to the teacher.
 
-The final step here is to add your email and name to the Git config. This will allow you to commit and push things to GitHub. Make sure to include the space after `.email` and `.name`, and always remember to close your quotes ' ' and " ".
+Then add your email and name to the Git config. This will allow you to commit and push things to GitHub. Make sure to include the space after `.email` and `.name`, and always remember to close your quotes ' ' and " ".
 
 1. Type `git config --global user.email 'your email here in single quotes'`.
 1. Type `git config --global user.name 'Your Name In Single Quotes'`.
 
 Once you are done, type `git config -l` and verify that it has your name and email saved correctly.
+
+#### Set up SSH Keys
+
+SSH stands for "secure shell" and is a protocol for encrypting communications with remote systems.
+You will need an SSH key pair which can be found in two text files that contain your "public" and "private" keys.
+We will add your public key to your GitHub settings so that you can securely communicate with the GitHub.com server without having to authenticate with a username and password.
+
+* Open a terminal
+* Execute `ls ~/.ssh`
+* If you see `No such file or directory`, then execute `ssh-keygen`, hit `Enter` to accept all defaults
+* You should have two files at least like `id_rsa` and `id_rsa.pub` which represent an SSH key pair. The `.pub` file contains the _public_ key which you need to copy to GitHub. The other file is your _private_ key that you should never touch, copy, use, or email. If that key is compromised, you should delete the files and use `ssh-keygen` to generate a new pair. You can generate as many pairs as you like, saving them into different files.
+* Copy the contents of `~/.ssh/id_rsa.pub`. Otherwise, you can use `cat ~/.ssh/id_rsa.pub` to "concatenate" the contents to the screen, then copy the text to your clipboard.
+* On GitHub.com, go to your user settings by clicking on your name/icon in the upper-right corner to view a drop-down list. Click on "Settings" (2nd from the bottom of the list).
+* In the left side, there is a table. Click on "SSH and GPG keys".
+* Click on the big green "New SSH Key".
+* Give your key a name like "laptop" and paste in the _public_ key value. 
+* Click the big green "Add SSH key" button.
+
+#### Forking the repo
+
+* Go to https://github.com/hurwitzlab/biosystems-analytics-2020
+* Click on the "Fork" button in the upper-right of the page, just below the big black bar.
+* Fork into _your_ repository.
+* Verify that you have something like https://github.com/id/biosystems-analytics-2020 where `<id>` is _your GitHub username_.
+* Go to the page of the repo and clone the repo on your computer using the command git clone `<ssh_clone>`
+
+NOTE: if you get a permission error, try to run
+`cd
+sudo umount /mnt/c
+sudo mount -t drvfs C: /mnt/c -o metadata`
+Then go back to the windows subsystem (cdwr command) and try to clone again.
 
 ## Install Python and PyCharm
 
@@ -126,15 +158,18 @@ Once you are done, type `git config -l` and verify that it has your name and ema
 To install python run the following at the WSL:
 
 `sudo apt update && upgrade
+
 sudo apt install python3 python3-pip ipython3`
 
 ### 2. Install PyCharm
-
 Note: you can only use and invoke PyCharm for the files in the Windows filesystem (also accessible form the WSL at /mnt/c/Users/<user-name>).
+PyCharm is a complete IDE for Python, allowing you to run directly the code through the interface. It has a lot of options and possibilities, but is more difficult to use. Alternatively, you can install Notepadd++, which is a good old notepad, that will allow you to edit your code (see below).
 
-- Download Jetbrains Toolbox to install PyCharm. In order to enable interactive coding you should also have python installed in Windows.
+- Download the community edition and install (PyCharm)[https://www.jetbrains.com/pycharm/download/#section=windows] 
+- In order to enable interactive coding you should also have python installed in Windows. Go to the Microsoft store and install the latest Python.
+- For each project you create you'll have to add the python interpreter properlt for PyCharm to run. If you have issues with the interpreter, see this (help page)[https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html].
     
-### 3. Create the alias to launch pycharm from the WSL.
+#### 3. Create the alias to launch pycharm from the WSL.
 1. Open a new terminal (the Ubuntu App) and type `whereis git`. This will show you all the places git is on your computer.
 
 2. Open your bash configuration: `nano ~/.bashrc`
@@ -146,3 +181,8 @@ After that you're done in this editor, so press `ctrl + x` at the same time to q
 3. Update your bash profile: 
 `source ~/.bashrc`
 Now you can use charm . & to open PyCharm projects from WSL.
+### 3. Install Notepadd++
+To download and install Notepad, go to the (download page)[https://notepad-plus-plus.org/]. And follow the instruction.
+
+
+You're done! Good job!
