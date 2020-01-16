@@ -273,5 +273,5 @@ Slack is a chat program.
 If students would like, we can create a Slack channel for the class to make it easier for us to communicate with each other.
 Your instructors are generally on Slack, so it's a more immediate way to interact than email.
 You can also chat with each other.
-We encourage you to discuss the material with each other, but *we strongly discouerage sharing solutions*!
+We encourage you to discuss the material with each other, but *we strongly discourage sharing solutions*!
 Please do not cheat on assignments.
