@@ -99,6 +99,16 @@ In order to get updates from the HurwitzLab copy of the repo, you must set it as
 Whenever you need to get updates from the HurwitzLab version of the repo, e.g.,to get the latest assignments, you will execute `git pull upstream master` in your local repository.
 This will "pull" any changes from the HurwitzLab repo into your fork.
 
+As I will be updating the repo from which you are pulling, `git pull` will often tell that changes from the remote repository need to be "merged" into your repo.
+You will be placed into an editor with a default message about how you are merging the remote changes.
+If this editor is `vim`, then you can type `EscZZ` to save the default message and quit the editor.
+
+NOTE: The editor that is chosen is determined by your `$EDITOR` environmental variable. If this is unset (and it usually is), then the OS will likely default to `vim` (or worse, the original `vi`). If you would like to set this to something else like `pico` or `emacs`, you can set `EDITOR` by adding this line to your `~/.bashrc` or `~/.bash_profile`:
+
+```
+export EDITOR=pico
+```
+
 To turn in your assignments, you will need to add the programs you create.
 For instance, for the "Crow's Nest" exercise, you will create a program called `crowsnest.py`.
 To add this file to your repo, you will do:
