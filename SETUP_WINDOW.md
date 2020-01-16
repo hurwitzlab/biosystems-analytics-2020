@@ -162,12 +162,14 @@ To install python run the following at the WSL:
 sudo apt install python3 python3-pip ipython3`
 
 ### 2. Install PyCharm
-
 Note: you can only use and invoke PyCharm for the files in the Windows filesystem (also accessible form the WSL at /mnt/c/Users/<user-name>).
+PyCharm is a complete IDE for Python, allowing you to run directly the code through the interface. It has a lot of options and possibilities, but is more difficult to use. Alternatively, you can install Notepadd++, which is a good old notepad, that will allow you to edit your code (see below).
 
-- Download Jetbrains Toolbox to install PyCharm. In order to enable interactive coding you should also have python installed in Windows.
+- Download the community edition and install (PyCharm)[https://www.jetbrains.com/pycharm/download/#section=windows] 
+- In order to enable interactive coding you should also have python installed in Windows. Go to the Microsoft store and install the latest Python.
+- For each project you create you'll have to add the python interpreter properlt for PyCharm to run. If you have issues with the interpreter, see this (help page)[https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html].
     
-### 3. Create the alias to launch pycharm from the WSL.
+#### 3. Create the alias to launch pycharm from the WSL.
 1. Open a new terminal (the Ubuntu App) and type `whereis git`. This will show you all the places git is on your computer.
 
 2. Open your bash configuration: `nano ~/.bashrc`
@@ -179,3 +181,8 @@ After that you're done in this editor, so press `ctrl + x` at the same time to q
 3. Update your bash profile: 
 `source ~/.bashrc`
 Now you can use charm . & to open PyCharm projects from WSL.
+### 3. Install Notepadd++
+To download and install Notepad, go to the (download page)[https://notepad-plus-plus.org/]. And follow the instruction.
+
+
+You're done! Good job!
