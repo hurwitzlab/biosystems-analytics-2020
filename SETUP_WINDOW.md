@@ -144,6 +144,13 @@ We will add your public key to your GitHub settings so that you can securely com
 * Click on the "Fork" button in the upper-right of the page, just below the big black bar.
 * Fork into _your_ repository.
 * Verify that you have something like https://github.com/id/biosystems-analytics-2020 where `<id>` is _your GitHub username_.
+* Go to the page of the repo and clone the repo on your computer using the command git clone `<ssh_clone>`
+
+NOTE: if you get a permission error, try to run
+`cd
+sudo umount /mnt/c
+sudo mount -t drvfs C: /mnt/c -o metadata`
+Then go back to the windows subsystem (cdwr command) and try to clone again.
 
 ## Install Python and PyCharm
 
