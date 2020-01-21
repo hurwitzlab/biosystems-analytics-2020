@@ -217,6 +217,12 @@ Each of these should be installable using Python's `pip` module, e.g.:
 $ python3 -m pip install pytest pylint flake8 mypy
 ```
 
+If you used the Anaconda distribution, you can use the `conda` tool, e.g.:
+
+```
+$ conda install flake8
+```
+
 # Editing code
 
 Python code must be written as _plain text_, so you cannot use something like Microsoft Word.
