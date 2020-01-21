@@ -148,7 +148,9 @@ We will add your public key to your GitHub settings so that you can securely com
 
 NOTE: if you get a permission error, try to run
 `cd`
-`sudo umount /mnt/c`   
+
+`sudo umount /mnt/c`  
+
 `sudo mount -t drvfs C: /mnt/c -o metadata`
 Then go back to the windows subsystem (cdwr command) and try to clone again.
 
@@ -158,15 +160,16 @@ Then go back to the windows subsystem (cdwr command) and try to clone again.
 To install python run the following at the WSL:
 
 `sudo apt update && upgrade` 
+
 `sudo apt install python3 python3-pip ipython3`
 
 ### 2. Install PyCharm
 Note: you can only use and invoke PyCharm for the files in the Windows filesystem (also accessible form the WSL at /mnt/c/Users/<user-name>).
 PyCharm is a complete IDE for Python, allowing you to run directly the code through the interface. It has a lot of options and possibilities, but is more difficult to use. Alternatively, you can install Notepadd++, which is a good old notepad, that will allow you to edit your code (see below).
 
-- Download the community edition and install (PyCharm)[https://www.jetbrains.com/pycharm/download/#section=windows] 
+- Download the community edition and install [PyCharm](https://www.jetbrains.com/pycharm/download/#section=windows)
 - In order to enable interactive coding you should also have python installed in Windows. Go to the Microsoft store and install the latest Python.
-- For each project you create you'll have to add the python interpreter properlt for PyCharm to run. If you have issues with the interpreter, see this (help page)[https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html].
+- For each project you create you'll have to add the python interpreter properlt for PyCharm to run. If you have issues with the interpreter, see this [help page](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html).
     
 #### 3. Create the alias to launch pycharm from the WSL.
 1. Open a new terminal (the Ubuntu App) and type `whereis git`. This will show you all the places git is on your computer.
