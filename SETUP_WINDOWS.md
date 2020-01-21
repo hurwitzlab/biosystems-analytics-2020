@@ -154,6 +154,12 @@ NOTE: if you get a permission error, try to run
 `sudo mount -t drvfs C: /mnt/c -o metadata`
 Then go back to the windows subsystem (cdwr command) and try to clone again.
 
+#### Set an upstream repository to get updates
+In order to get updates from the HurwitzLab copy of the repo, you must set it as an "upstream" repository.
+
+Change into your local repo checkout, e.g., `cd /biosystems-analytics-2020`
+Execute `git remote add upstream https://github.com/hurwitzlab/biosystems-analytics-2020.git`
+
 ## Install Python and PyCharm
 
 ### 1. Install Python
