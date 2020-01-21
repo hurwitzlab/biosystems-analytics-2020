@@ -148,7 +148,8 @@ We will add your public key to your GitHub settings so that you can securely com
 
 NOTE: if you get a permission error, try to run
 `cd
-sudo umount /mnt/c
+sudo umount /mnt/c  
+
 sudo mount -t drvfs C: /mnt/c -o metadata`
 Then go back to the windows subsystem (cdwr command) and try to clone again.
 
