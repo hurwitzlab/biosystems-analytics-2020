@@ -148,9 +148,8 @@ We will add your public key to your GitHub settings so that you can securely com
 
 NOTE: if you get a permission error, try to run
 `cd
-sudo umount /mnt/c  
-
-sudo mount -t drvfs C: /mnt/c -o metadata`
+sudo umount /mnt/c   
+sudo mount -t drvfs C: /mnt/c -o metadata `
 Then go back to the windows subsystem (cdwr command) and try to clone again.
 
 ## Install Python and PyCharm
@@ -158,8 +157,7 @@ Then go back to the windows subsystem (cdwr command) and try to clone again.
 ### 1. Install Python
 To install python run the following at the WSL:
 
-`sudo apt update && upgrade
-
+`sudo apt update && upgrade    
 sudo apt install python3 python3-pip ipython3`
 
 ### 2. Install PyCharm
