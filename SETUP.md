@@ -231,6 +231,20 @@ Ken's personal preference is for `vi`, a terminal-based editor, but most people 
 You should try different tools and choose the one that works best for you.
 I might suggest you start with VSCode as it works on both Windows and Mac quite well.
 
+IDEs:
+
+* PyCharm
+* VSCode
+* Spyder
+
+Editors:
+
+* Spyder
+* TextWrangler
+* Sublime Text
+* TextMate
+* Notepad++ (Windows)
+
 # Indentation
 
 Python uses whitespace to denote code structure.
