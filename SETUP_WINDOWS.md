@@ -147,9 +147,9 @@ We will add your public key to your GitHub settings so that you can securely com
 * Go to the page of the repo and clone the repo on your computer using the command git clone `<ssh_clone>`
 
 NOTE: if you get a permission error, try to run
-`cd
-sudo umount /mnt/c   
-sudo mount -t drvfs C: /mnt/c -o metadata `
+`cd`
+`sudo umount /mnt/c`   
+`sudo mount -t drvfs C: /mnt/c -o metadata`
 Then go back to the windows subsystem (cdwr command) and try to clone again.
 
 ## Install Python and PyCharm
@@ -157,8 +157,8 @@ Then go back to the windows subsystem (cdwr command) and try to clone again.
 ### 1. Install Python
 To install python run the following at the WSL:
 
-`sudo apt update && upgrade    
-sudo apt install python3 python3-pip ipython3`
+`sudo apt update && upgrade` 
+`sudo apt install python3 python3-pip ipython3`
 
 ### 2. Install PyCharm
 Note: you can only use and invoke PyCharm for the files in the Windows filesystem (also accessible form the WSL at /mnt/c/Users/<user-name>).
