@@ -94,6 +94,15 @@ In order to get updates from the HurwitzLab copy of the repo, you must set it as
 * Change into your local repo checkout, e.g., `~/work/biosystems-analytics-2020`
 * Execute `git remote add upstream https://github.com/hurwitzlab/biosystems-analytics-2020.git`
 
+# Add collaborators
+
+You will need to add your instructors as "Collaborators" on the course repo.
+
+* At GitHub.com, select your "biosystems-analytics-2020"
+* Choose the "Settings" for the repository (not your personal settings"
+* Choose "Collaborators" from the left-hand menu
+* Type GitHub IDs "bhurwitz33" and "kyclark" into box, click "Add collaborator"
+
 # Using `git`
 
 Whenever you need to get updates from the HurwitzLab version of the repo, e.g.,to get the latest assignments, you will execute `git pull upstream master` in your local repository.
