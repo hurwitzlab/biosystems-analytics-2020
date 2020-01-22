@@ -26,7 +26,7 @@ IMPORTANT: Anytime you uninstall the app and reinstall it you will lose any data
 ### 3. Finish Installing the Ubuntu App.
 Then we need to setup your user name and password for ubuntu.
 
-- It will ask you to enter a username. This will be the root / admin user for the Ubuntu FS.
+- It will ask you to enter a username. This will be the root / admin user for the Ubuntu FS. Don't use capital letters in this name.
 
 - It will then ask you to enter and confirm a password. Also note that it will protect your password by not displaying it to the screen when you type, but it is registering your key strokes.
 
