@@ -171,7 +171,7 @@ then run:
 
 Let's also install a bunch of usefull python packages:
 
-`sudo apt install python-pytest`
+`sudo apt install python3-pytest`
 
 ### 2. Install PyCharm
 Note: you can only use and invoke PyCharm for the files in the Windows filesystem (also accessible form the WSL at /mnt/c/Users/<user-name>).
