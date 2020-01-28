@@ -166,8 +166,12 @@ Execute `git remote add upstream https://github.com/hurwitzlab/biosystems-analyt
 To install python run the following at the WSL:
 
 `sudo apt update && upgrade` 
-
+then run:
 `sudo apt install python3 python3-pip ipython3`
+
+Let's also install a bunch of usefull python packages:
+
+`sudo apt install python3-pytest`
 
 ### 2. Install PyCharm
 Note: you can only use and invoke PyCharm for the files in the Windows filesystem (also accessible form the WSL at /mnt/c/Users/<user-name>).
