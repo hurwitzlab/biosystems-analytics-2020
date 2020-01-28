@@ -10,6 +10,7 @@ TL;DR:
 * `git commit`: to tell Git to commit a new version of the file. Do this often!
 * `git push`: to send your changes from your laptop to a remote repository like GitHub.com
 * `git pull`: to import changes from a remote location like the course GitHub repo
+* `git status`: tells you info on your repo
 * `git stash`: if you have local changes that conflict with changes you are trying to pull, you can "stash" your local mods and let the `pull` continue
 * Merge conflict: if two people have modified the same file in the same place, Git is unable to merge the changes into one unified file. This creates a "merge conflict" where all the changes are put into the one file and you must sort out the lines to keep.
 
