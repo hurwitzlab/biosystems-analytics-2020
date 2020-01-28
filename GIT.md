@@ -99,7 +99,14 @@ You will need to add your instructors as "Collaborators" on the course repo.
 Whenever you need to get updates from the HurwitzLab version of the repo, e.g.,to get the latest assignments, you will execute `git pull upstream master` in your local repository.
 This will "pull" any changes from the HurwitzLab repo into your fork.
 
+## Pulling from the course repo (upstream)
+
 As I will be updating the repo from which you are pulling, `git pull` will often tell that changes from the remote repository need to be "merged" into your repo.
+If you have local changes that will conflict with the remote changes, Git will recommend you `commit` or `stash` your local changes.
+
+To commit them, use `git commit -m "commit message here"`.
+This will save your changes into your local index.
+Files can then be merged with the remote changes.
 You will be placed into an editor with a default message about how you are merging the remote changes.
 If this editor is `vim`, then you can type `EscZZ` to save the default message and quit the editor.
 
@@ -108,6 +115,11 @@ NOTE: The editor that is chosen is determined by your `$EDITOR` environmental va
 ```
 export EDITOR=pico
 ```
+
+If you don't need to save (commit) your local changes, you can use `git stash` to have Git tuck them away and overwrite the local files with the remote versions.
+You can later use `git stash apply` to apply the stashed changes to the remote changes you pulled in.
+
+## Adding new files (homework)
 
 To turn in your assignments, you will need to add the programs you create.
 For instance, for the "Crow's Nest" exercise, you will create a program called `crowsnest.py`.
@@ -151,6 +163,8 @@ The editor is likely to be `vi` (or `vim`), and you will probably have no idea h
 If you want to use `vi`, then press `i` to enter the "insert" mode, type some text, press `Esc` to enter "command" mode, then type `ZZ` to save and exit.
 Or just type `EscZZ` to exit without saving anything and go back and use the `-m` option.
 
+## Pushing your changes
+
 The actions of `add` and `commit` affect only your _local_ repository.
 You still need to "push" your commits to GitHub:
 
@@ -163,4 +177,3 @@ $ git push
 To grade your assigments, I will use `git pull` to pull down the changes from GitHub.com to my machine.
 I will run the test suite.
 Your grade will be the percentage of passing tests, so if you passed 80% of the tests, then your grade is 80% of the points for the assignment.
-
