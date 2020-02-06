@@ -1,0 +1,71 @@
+= My Favorite Things
+
+Write a Python program called `favorite.py` that will accept one or more positional arguments that are one's favorite things.
+The program should print the "things" joined by an optional `-s` or `--sep` (default `', '`).
+If there is one "thing," it should print:
+
+----
+$ ./favorite.py cake
+cake
+This is one of my favorite things.
+----
+
+If there are two or more items:
+
+----
+$ ./favorite.py cake cookies
+cake, cookies
+These are a few of my favorite things.
+----
+
+If there is a `--sep`, use that:
+
+----
+$ ./favorite.py cake cookies -s '::'
+cake::cookies
+These are a few of my favorite things.
+----
+
+When run with no arguments, the program should print a brief usage:
+
+----
+$ ./favorite.py
+usage: favorite.py [-h] [-s str] str [str ...]
+favorite.py: error: the following arguments are required: str
+----
+
+When run with `-h` or `--help`, it should print a longer usage:
+
+----
+$ ./favorite.py -h
+usage: favorite.py [-h] [-s str] str [str ...]
+
+My Favorite Things
+
+positional arguments:
+  str                Some things
+
+optional arguments:
+  -h, --help         show this help message and exit
+  -s str, --sep str  A separator (default: , )
+----
+
+It should pass all the tests:
+
+----
+$ make test
+pytest -xv test.py
+============================= test session starts ==============================
+...
+collected 7 items
+
+test.py::test_exists PASSED                                              [ 14%]
+test.py::test_usage PASSED                                               [ 28%]
+test.py::test_one PASSED                                                 [ 42%]
+test.py::test_two PASSED                                                 [ 57%]
+test.py::test_two_sep PASSED                                             [ 71%]
+test.py::test_more_than_two_default_sep PASSED                           [ 85%]
+test.py::test_more_than_two_sep PASSED                                   [100%]
+
+============================== 7 passed in 0.35s ===============================
+----
