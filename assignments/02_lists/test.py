@@ -8,7 +8,10 @@ import string
 from subprocess import getstatusoutput
 
 prg = './favorite.py'
-things = ['cake', 'cookies', 'tart', 'pie', 'fudge', 'popsicle', 'brownies', 'ice cream', 'popover', 'scone']
+things = [
+    'cake', 'cookies', 'tart', 'pie', 'fudge', 'popsicle', 'brownies',
+    'ice cream', 'popover', 'scone'
+]
 coda_one = '\nThis is one of my favorite things.'
 coda = '\nThese are a few of my favorite things.'
 seps = ':$#@!'
@@ -78,10 +81,11 @@ def test_more_than_two_sep():
 
     args = random.sample(things, k=random.randint(3, 7))
     sep = random.choice(seps)
-    print(f'{prg} {" ".join(map(quote, args))} --separator "{sep}"')
-    rv, out = getstatusoutput(f'{prg} {" ".join(map(quote, args))} --sep "{sep}"')
+    rv, out = getstatusoutput(
+        f'{prg} {" ".join(map(quote, args))} --sep "{sep}"')
     assert rv == 0
     assert out == f'{sep.join(args)}{coda}'
+
 
 # --------------------------------------------------
 def quote(s):
