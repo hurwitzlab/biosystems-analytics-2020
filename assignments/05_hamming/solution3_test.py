@@ -61,6 +61,8 @@ def dist(s1, s2):
 def test_dist():
     """dist ok"""
 
+    assert dist('', '') == 1
+    assert dist('foo', 'foo') == 0
     assert dist('foo', 'boo') == 1
     assert dist('foo', 'faa') == 2
     assert dist('foo', 'foobar') == 3
