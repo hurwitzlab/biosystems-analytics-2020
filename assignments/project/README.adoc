@@ -1,0 +1,23 @@
+= Semester Project Guidelines
+
+Your project submission must include the following:
+
+* A novel Python program of your choosing
+* Tests for your functions and/or program (i.e., unit and integration tests)
+* A README file documenting the program, how to run it, and how to test it. This file must be in either Markdown or Asciidoctor format. A PDF version generated from the text format would be nice.
+* Any needed input files for testing or demonstration
+
+You program can do anything at all, but it must respond to some form of input like command-line arguments or input data.
+That is, the program must in some way behave differently given different inputs
+
+* Mutate some text provided on the command line or from a file, e.g., encryption
+* Generate a song or poem
+* Play a game such Rock, Paper, Scissors
+
+Your program's test must use multiple inputs to verify that your program responds correctly.
+For example, if your program uses the "ROT13" encryption to mutate input text, your tests should include more than one input value and verify that each input is encrypted correctly.
+You should review all the tests I've provided both in the `test.py` files as well as the `test_` functions that I've included in program files.
+
+You might find one of these more advanced problems inspiring:
+
+    https://github.com/kyclark/more_tiny_python_projects
