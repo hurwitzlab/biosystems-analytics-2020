@@ -155,7 +155,7 @@ def main():
 ----
 
 <1> You need to do this `args.numseqs` times
-<2> Use `random.choice` to select a number between `args.minlen` and `arg.maxlen`
+<2> Use `random.randint` to select a number between `args.minlen` and `arg.maxlen`
 <3> Use `random.sample` to select `seq_len` number of bases from the `pool` and make a new `str` for your sequence.
 <4> Write the new `seq` to the output file in the FASTA format.
 <5> Print the output message.
