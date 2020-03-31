@@ -21,3 +21,9 @@ You should review all the tests I've provided both in the `test.py` files as wel
 You might find one of these more advanced problems inspiring:
 
     https://github.com/kyclark/more_tiny_python_projects
+
+Here is a (Node/JS) program that sends a random joke:
+
+    https://github.com/InconceivableDuck/joke-sender
+
+Consider writing a program to solve one of the challenges at http://rosalind.info.
