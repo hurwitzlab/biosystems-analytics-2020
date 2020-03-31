@@ -132,11 +132,9 @@ def test_options():
         assert min(seq_lens) >= min_len
 
         # bases are correct
-        bases = ''.join(
-            sorted(
-                set(chain(map(lambda seq: ''.join(sorted(set(seq.seq))),
-                              seqs)))))
-        assert bases == 'ACGU'
+        bases = set(''.join(
+            map(lambda seq: ''.join(sorted(set(seq.seq))), seqs)))
+        assert bases == set('ACGU')
 
         # the pct GC is about right
         gc = list(map(lambda seq: GC(seq.seq) / 100, seqs))
