@@ -4,7 +4,7 @@ Your project submission must include the following:
 
 * A novel Python program of your choosing
 * Tests for your functions and/or program (i.e., unit and integration tests)
-* A README file documenting the program, how to run it, and how to test it. This file must be in either Markdown or Asciidoctor format. A PDF version generated from the text format would be nice.
+* A README file documenting the program, how to run it, and how to test it. This file must be in either Markdown https://www.markdownguide.org/basic-syntax or Asciidoctor https://asciidoctor.org/docs/asciidoc-syntax-quick-reference format. A PDF version generated from the text format would be nice.
 * Any needed input files for testing or demonstration
 
 You program can do anything at all, but it must respond to some form of input like command-line arguments or input data.
