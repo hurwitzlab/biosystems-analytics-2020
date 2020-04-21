@@ -11,3 +11,4 @@ tex2pdf*
 .coverage
 .idea
 venv
+*.graffle
