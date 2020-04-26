@@ -126,7 +126,6 @@ def run(args):
                               skip=args['tax'],
                               keyword=args['kw'])
 
-        print(cmd)
         rv, out = getstatusoutput(cmd)
         assert rv == 0
         assert out.split('\n')[-1] == out_tmpl.format(skipped=args['skipped'],
